@@ -31,6 +31,7 @@ namespace Microsoft.Exchange.WebServices.Autodiscover
     using System.DirectoryServices;
     using System.DirectoryServices.ActiveDirectory;
     using System.Runtime.InteropServices;
+    using System.Runtime.Versioning;
     using Microsoft.Exchange.WebServices.Data;
 
     /// <summary>
@@ -73,6 +74,7 @@ namespace Microsoft.Exchange.WebServices.Autodiscover
         /// </summary>
         /// <param name="domainName">Name of the domain.</param>
         /// <returns>List of Autodiscover URLs</returns>
+        [SupportedOSPlatform("windows")]
         public List<string> GetAutodiscoverScpUrlsForDomain(string domainName)
         {
             int maxHops = AutodiscoverMaxScpHops;
@@ -110,6 +112,7 @@ namespace Microsoft.Exchange.WebServices.Autodiscover
         /// <param name="domainName">Domain name to search for SCP information</param>
         /// <param name="ldapPath">LDAP path to start the search</param>
         /// <param name="maxHops">The number of remaining allowed hops</param>
+        [SupportedOSPlatform("windows")]
         private List<string> GetScpUrlList(
            string domainName,
            string ldapPath,
@@ -351,6 +354,7 @@ namespace Microsoft.Exchange.WebServices.Autodiscover
         /// Get the local site name.
         /// </summary>
         /// <returns>Name of the local site.</returns>
+        [SupportedOSPlatform("windows")]
         private string GetSiteName()
         {
             try

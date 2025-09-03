@@ -242,12 +242,15 @@ namespace Microsoft.Exchange.WebServices.Data
                     this.Disconnect(HangingRequestDisconnectReason.Exception, ex);
                     return;
                 }
-                catch (HttpException ex)
-                {
-                    // Stream is closed, so disconnect.
-                    this.Disconnect(HangingRequestDisconnectReason.Exception, ex);
-                    return;
-                }
+                // Removed:
+                //  The same situations now surface as IOException/WebException, which are already caught.
+                //  No HttpException in NET8.
+                // catch (HttpException ex)
+                // {
+                //     // Stream is closed, so disconnect.
+                //     this.Disconnect(HangingRequestDisconnectReason.Exception, ex);
+                //     return;
+                // }
                 catch (WebException ex)
                 {
                     // Stream is closed, so disconnect.

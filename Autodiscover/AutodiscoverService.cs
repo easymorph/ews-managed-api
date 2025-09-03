@@ -30,6 +30,7 @@ namespace Microsoft.Exchange.WebServices.Autodiscover
     using System.IO;
     using System.Linq;
     using System.Net;
+    using System.Runtime.Versioning;
     using System.Text.RegularExpressions;
     using System.Xml;
     using Microsoft.Exchange.WebServices.Data;
@@ -1286,6 +1287,7 @@ namespace Microsoft.Exchange.WebServices.Autodiscover
         /// </summary>
         /// <param name="domainName">Name of the domain.</param>
         /// <returns></returns>
+        [SupportedOSPlatform("windows")]
         private ICollection<string> DefaultGetScpUrlsForDomain(string domainName)
         {
             DirectoryHelper helper = new DirectoryHelper(this);
@@ -1302,7 +1304,7 @@ namespace Microsoft.Exchange.WebServices.Autodiscover
         {
             List<Uri> urls = new List<Uri>();
 
-            if (this.enableScpLookup)
+            if (this.enableScpLookup && OperatingSystem.IsWindows())
             {
                 // Get SCP URLs
                 Func<string, ICollection<string>> callback = this.GetScpUrlsForDomainCallback ?? this.DefaultGetScpUrlsForDomain;
