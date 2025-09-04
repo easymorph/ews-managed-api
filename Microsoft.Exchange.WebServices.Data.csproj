@@ -29,8 +29,24 @@
         <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
         <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
         <GenerateAssemblyInfoFile>false</GenerateAssemblyInfoFile>
-
     </PropertyGroup>
+    
+    <PropertyGroup>
+        <!-- nuget package properties -->
+        <PackageId>Morph.EwsManagedApi</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>EasyMorph</Authors>
+        <Description>.NET 8 fork of the EWS Managed API</Description>
+        <PackageTags>Exchange;EWS;Microsoft;Email;NET8</PackageTags>
+        <RepositoryUrl>https://github.com/OWNER/REPO</RepositoryUrl>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+    
     <PropertyGroup Condition="'$(Configuration)'=='Debug'">
         <DebugSymbols>true</DebugSymbols>
         <DebugType>full</DebugType>
@@ -53,9 +69,6 @@
         <WarningLevel>4</WarningLevel>
         <Prefer32Bit>false</Prefer32Bit>
     </PropertyGroup>
-    <ItemGroup>
-        <None Include="ews-managed-api.nuspec"/>
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.8"/>
