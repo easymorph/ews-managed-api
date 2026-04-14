@@ -71,7 +71,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.8"/>
+        <PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.15"/>
         <PackageReference Include="System.DirectoryServices" Version="9.0.8"/>
         <PackageReference Include="System.Drawing.Common" Version="9.0.8"/>
     </ItemGroup>
