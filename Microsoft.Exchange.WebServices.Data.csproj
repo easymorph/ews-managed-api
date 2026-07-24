@@ -34,7 +34,7 @@
     <PropertyGroup>
         <!-- nuget package properties -->
         <PackageId>Morph.EwsManagedApi</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.0.1</Version>
         <Authors>EasyMorph</Authors>
         <Description>.NET 8 fork of the EWS Managed API</Description>
         <PackageTags>Exchange;EWS;Microsoft;Email;NET8</PackageTags>
