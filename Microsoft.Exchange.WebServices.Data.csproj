@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <ProductVersion>9.0.30729</ProductVersion>
         <SchemaVersion>2.0</SchemaVersion>
         <ProjectGuid>{F059972F-0561-4203-ABB8-3ABB41CCBE22}</ProjectGuid>
@@ -34,10 +34,10 @@
     <PropertyGroup>
         <!-- nuget package properties -->
         <PackageId>Morph.EwsManagedApi</PackageId>
-        <Version>1.0.1</Version>
+        <Version>1.1.0</Version>
         <Authors>EasyMorph</Authors>
         <Description>.NET 8 fork of the EWS Managed API</Description>
-        <PackageTags>Exchange;EWS;Microsoft;Email;NET8</PackageTags>
+        <PackageTags>Exchange;EWS;Microsoft;Email;NET10</PackageTags>
         <RepositoryUrl>https://github.com/OWNER/REPO</RepositoryUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -71,7 +71,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="System.Security.Cryptography.Xml" Version="9.0.18" />
+        <PackageReference Include="System.Security.Cryptography.Xml" Version="10.0.13" />
         <PackageReference Include="System.DirectoryServices" Version="9.0.8" />
         <PackageReference Include="System.Drawing.Common" Version="9.0.8" />
     </ItemGroup>
